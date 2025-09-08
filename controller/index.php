@@ -24,8 +24,10 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
   }
   $result = controller(isset($_GET['action']) ? $_GET['action'] : "select" );
   echo json_encode($result);
+  exit;
 echo "<p>Hello</p>"
 
 
 ?>  
+
 

@@ -15,7 +15,7 @@ class userModel {
     $con = new Conection();
     $con = $con->connect();
 
-    $sql = $number ? "SELECT * FROM user WHERE `number` = $number" : "SELECT * FROM user";
+    $sql = $number ? "SELECT * FROM user WHERE `number` = '$number'" : "SELECT * FROM user";
     $result = $con->query($sql);
     if (!$result->num_rows) return false;
     $rows = $result->fetch_all();
@@ -77,3 +77,4 @@ class userModel {
 
 
 ?>
+

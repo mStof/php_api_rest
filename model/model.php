@@ -7,7 +7,7 @@ class userModel {
   public function __construct($name = "", $number = "", $email = null) {
     $this->name = $name;
     $this->number = $number;
-    $this->number = $email;
+    $this->email = $email;
   }
 
   public function selectData($number = null) {
@@ -74,5 +74,6 @@ class userModel {
     }
   }
 }
+
 
 ?>

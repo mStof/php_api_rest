@@ -19,15 +19,17 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
       case "select":
          return $model->selectData($number);
       default:
+        return ["error" => "no state"];
     }
     
   }
   $result = controller(isset($_GET['action']) ? $_GET['action'] : "select" );
+echo "<p>Hello</p>"
   echo json_encode($result);
   exit;
-echo "<p>Hello</p>"
 
 
 ?>  
+
 
 

@@ -1,4 +1,4 @@
-<?
+<?php
 class userModel {
   private string $name;
   private string $number;
@@ -77,4 +77,5 @@ class userModel {
 
 
 ?>
+
 

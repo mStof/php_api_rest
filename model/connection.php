@@ -2,7 +2,7 @@
 
 class Conection {
     public function connect() {
-      $con = new mysqli("mysql-cp7h.railway.internal", "root", "VVXATdKixIImPGMIOuXeuhkoaACtOgqY", "railway");
+      $con = new mysqli("mysql-cp7h.railway.internal", "root", "VVXATdKixIImPGMIOuXeuhkoaACtOgqY", "railway", "3306");
       if($con->connect_error) {
         die("Connection failed: " . $con->connect_error);
       }
@@ -17,6 +17,7 @@ class Conection {
 //     ?int $port = null,
 //     ?string $socket = null
 // )
+
 
 
 

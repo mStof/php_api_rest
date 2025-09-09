@@ -17,7 +17,10 @@ class userModel {
 
     $sql = $number ? "SELECT * FROM user WHERE `number` = '$number'" : "SELECT * FROM user";
     $result = $con->query($sql);
-    if (!$result->num_rows) return [];
+    if (!$result->num_rows) {
+      echo "error";
+      return [];
+    }  
     $rows = $result->fetch_all();
     $fields = $result->fetch_fields();
     $data = [];
@@ -77,6 +80,7 @@ class userModel {
 
 
 ?>
+
 
 
 

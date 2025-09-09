@@ -9,14 +9,15 @@ class Conection {
       return $con;
     }
 }
-public __construct(
-    ?string $hostname = null,
-    ?string $username = null,
-    #[\SensitiveParameter] ?string $password = null,
-    ?string $database = null,
-    ?int $port = null,
-    ?string $socket = null
-)
+// public __construct(
+//     ?string $hostname = null,
+//     ?string $username = null,
+//     #[\SensitiveParameter] ?string $password = null,
+//     ?string $database = null,
+//     ?int $port = null,
+//     ?string $socket = null
+// )
+
 
 
 

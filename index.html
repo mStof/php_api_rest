@@ -20,6 +20,8 @@
             fetch(`https://grupo-4.infinityfreeapp.com/Mobile/ex-01/controller/controller.php?action=insert&name=${name}&number=${number}&email=${email}`)
         }
         const getData = async () => {
+            console.log("start");
+            
             try {
                 const data = await fetch("https://grupo-4.infinityfreeapp.com/Mobile/ex-01/controller/controller.php").then(res => res.json())
                 document.body.innerText = JSON.stringify(data);

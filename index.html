@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const action = params.get("action") ? params.get("action") : "select" ;
+        
+        const insertData = async () => {
+            const nome = params.get("nome");
+            const number = params.get("number");
+            const email = params.get("email");
+
+            fetch(`https://grupo-4.infinityfreeapp.com/Mobile/ex-01/controller/controller.php?action=insert&name=${name}&number=${number}&email=${email}`)
+        }
+        const getData = async () => {
+            try {
+                const data = await fetch("https://grupo-4.infinityfreeapp.com/Mobile/ex-01/controller/controller.php").then(res => res.json())
+                document.body.innerText = JSON.stringify(data);
+            }
+            catch (err) {
+                document.body.innerText = JSON.stringify({ status: "erro", msg: err });
+
+            }     
+        }
+        const config = {
+            insert: insertData,
+            select: getData
+        }
+        config[action]()
+
+    </script>
+</body>
+
+</html>
